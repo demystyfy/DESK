@@ -1,0 +1,106 @@
+/*
+ * Created by SharpDevelop.
+ * User: b-filippov
+ * Date: 05.05.2021
+ * Time: 9:26
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+using System;
+using Autodesk.Revit.UI;
+using Autodesk.Revit.DB;
+using Autodesk.Revit.UI.Selection;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace num
+{
+    [Autodesk.Revit.Attributes.Transaction(Autodesk.Revit.Attributes.TransactionMode.Manual)]
+    [Autodesk.Revit.DB.Macros.AddInId("83B9C617-3880-4511-A557-199DB5C473CE")]
+	public partial class ThisApplication
+	{
+		private void Module_Startup(object sender, EventArgs e)
+		{
+
+		}
+
+		private void Module_Shutdown(object sender, EventArgs e)
+		{
+
+		}
+
+		#region Revit Macros generated code
+		private void InternalStartup()
+		{
+			this.Startup += new System.EventHandler(Module_Startup);
+			this.Shutdown += new System.EventHandler(Module_Shutdown);
+		}
+		#endregion
+		public void AutoNumerate()
+		{
+			Document doc = this.ActiveUIDocument.Document;
+			ViewSchedule vs = doc.ActiveView as ViewSchedule;
+			TableData tData = vs.GetTableData();
+			TableSectionData tsDada = tData.GetSectionData(SectionType.Body);
+			int startIndex = 30; //Стартовый значение для номера
+			using (TransactionGroup tGroup = new TransactionGroup(doc,"Автонумерация спецификации: "+vs.Name)) {
+				tGroup.Start();
+				for (int rInd = 0; rInd < tsDada.NumberOfRows; rInd++) {
+					List<Element> elementsOnRow = GetElementsOnRow(doc,vs,rInd);
+					if (null != elementsOnRow) {
+						SetNum(doc,startIndex++,elementsOnRow);
+					}
+				}
+				tGroup.Assimilate();
+			}
+		}
+		
+		private void SetNum(Document doc, int num, List<Element> elements)
+		{
+			using (Transaction tr = new Transaction(doc,"Задание номера позиции элементам")) {
+				tr.Start();
+				foreach (Element curElement in elements) {
+					curElement.LookupParameter("GP_Номер").Set(num.ToString()); // Заполнение параметра Комментарии
+					//curElement.get_Parameter(new Guid("AE8FF999-1F22-4ED7-AD33-61503D85F0F4")).Set(num.ToString()); // Заполнение общего параметра ADSK_Позиция
+				}
+				tr.Commit();
+			}
+		}
+		
+		private List<Element> GetElementsOnRow(Document doc, ViewSchedule vs, int rowNumber)
+		{
+			TableData tableData =  vs.GetTableData();
+			TableSectionData tableSectionData = tableData.GetSectionData(SectionType.Body);
+			List<ElementId> elemIds = new FilteredElementCollector(doc,vs.Id)
+				.ToElementIds()
+				.ToList();
+			List<Element> elementsOnRow = new List<Element>();
+			List<ElementId> remainingElementsIds = null;
+
+			using(Transaction t = new Transaction(doc,"Empty"))
+			{
+				t.Start();
+				using (SubTransaction st = new SubTransaction(doc))
+				{
+					st.Start();
+					try {
+						tableSectionData.RemoveRow(rowNumber);
+					} catch (Exception) {
+						return null;
+					}
+					st.Commit();
+				}
+				remainingElementsIds = new FilteredElementCollector(doc,vs.Id)
+					.ToElementIds()
+					.ToList();
+				t.RollBack();
+			}
+			foreach(ElementId id in elemIds)
+			{
+				if(remainingElementsIds.Contains(id)) continue;
+				elementsOnRow.Add(doc.GetElement(id));
+			}
+			return elementsOnRow;
+		}
+	}
+}
