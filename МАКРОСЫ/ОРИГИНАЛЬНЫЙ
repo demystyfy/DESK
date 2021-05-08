@@ -5,17 +5,27 @@ public void AutoNumerate()
 			TableData tData = vs.GetTableData();
 			TableSectionData tsDada = tData.GetSectionData(SectionType.Body);
 			int startIndex = 1; //Стартовый значение для номера
+			
+			
 			using (TransactionGroup tGroup = new TransactionGroup(doc,"Автонумерация спецификации: "+vs.Name)) {
 				tGroup.Start();
-				for (int rInd = 0; rInd < tsDada.NumberOfRows; rInd++) {
+				
+				for (int rInd = 0; rInd < tsDada.NumberOfRows; rInd++) 
+				{
 					List<Element> elementsOnRow = GetElementsOnRow(doc,vs,rInd);
-					if (null != elementsOnRow) {
+					if (null != elementsOnRow)
+					{
 						SetNum(doc,startIndex++,elementsOnRow);
 					}
 				}
 				tGroup.Assimilate();
 			}
 		}
+
+
+
+
+
 		
 		private void SetNum(Document doc, int num, List<Element> elements)
 		{
@@ -23,22 +33,32 @@ public void AutoNumerate()
 				tr.Start();
 				foreach (Element curElement in elements) {
 					curElement.LookupParameter("Комментарии").Set(num.ToString()); // Заполнение параметра Комментарии
-					//curElement.get_Parameter(new Guid("AE8FF999-1F22-4ED7-AD33-61503D85F0F4")).Set(num.ToString()); // Заполнение общего параметра ADSK_Позиция
 				}
 				tr.Commit();
 			}
 		}
 		
+		
+		
+		
+		
+		
 		private List<Element> GetElementsOnRow(Document doc, ViewSchedule vs, int rowNumber)
 		{
 			TableData tableData =  vs.GetTableData();
 			TableSectionData tableSectionData = tableData.GetSectionData(SectionType.Body);
+
+
+
 			List<ElementId> elemIds = new FilteredElementCollector(doc,vs.Id)
 				.ToElementIds()
 				.ToList();
-			List<Element> elementsOnRow = new List<Element>();
-			List<ElementId> remainingElementsIds = null;
 
+
+			List<Element> elementsOnRow = new List<Element>();
+			
+			
+			List<ElementId> remainingElementsIds = null;
 			using(Transaction t = new Transaction(doc,"Empty"))
 			{
 				t.Start();
@@ -64,3 +84,107 @@ public void AutoNumerate()
 			}
 			return elementsOnRow;
 		}
+
+
+
+
+
+
+
+
+
+
+		//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+		public void AutoNumerate()
+		{	
+			Document doc = this.ActiveUIDocument.Document;
+			ViewSchedule vs = doc.ActiveView as ViewSchedule;
+			TableData tData = vs.GetTableData();
+			TableSectionData tsDada = tData.GetSectionData(SectionType.Body);
+			int startIndex = 1; //Стартовый значение для номера
+
+			using (TransactionGroup tGroup = new TransactionGroup(doc,"Автонумерация спецификации: "+vs.Name)) 
+			{
+			tGroup.Start();
+
+				for (int rInd = 0; rInd < tsDada.NumberOfRows; rInd++) 
+				{
+					
+				SetNum(doc,startIndex++,MyElements);
+					
+				}
+			tGroup.Assimilate();
+		    }
+		}
+			
+			
+		
+		
+		public void SetNum(Document doc, int num, List<Element> Myelements)
+		{
+			using (Transaction tr = new Transaction(doc,"Задание номера позиции элементам"))
+			
+			{
+			tr.Start();
+
+				//List <ElementId> eleIds = new List <ElementId> {946164,946385,946484,946631,946708,946759,946816,946835,946912,946949,947002,947057,947108,947273,947330,947379};
+				
+				int[] eleIds = {946164,946385,946484,946631,946708,946759,946816,946835,946912,946949,947002,947057,947108,947273,947330,947379};
+				
+				
+				foreach (int id in eleIds) 
+				{
+					
+					List<Element> MyElements = GetElement(id);
+				}
+
+				foreach (Element ele in MyElements) 
+				{
+					ele.LookupParameter("Комментарии").Set(num.ToString()); // Заполнение параметра Комментарии
+				}
+
+			tr.Commit();
+		    }
+	      }
+		
+		
+		
+		private List<Element> GetElementsOnRow(Document doc, ViewSchedule vs, int rowNumber)
+		{
+			TableData tableData =  vs.GetTableData();
+			TableSectionData tableSectionData = tableData.GetSectionData(SectionType.Body);
+
+
+
+			List<ElementId> elemIds = new FilteredElementCollector(doc,vs.Id)
+				.ToElementIds()
+				.ToList();
+
+
+			List<Element> elementsOnRow = new List<Element>();
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
