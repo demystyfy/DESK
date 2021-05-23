@@ -21,12 +21,12 @@ namespace CombineParameters
         {
             //Create Ribbon Element
             //нет необходимости использовать переменные
-            app.CreateRibbonTab("ДАК ПРОДЖЕКТ");
+            app.CreateRibbonTab("DAC Project");
             string path = Assembly.GetExecutingAssembly().Location;
             //needs to be string, therefore using quotation marks 
-            PushButtonData button = new PushButtonData("QWERTY", "Нажмите для объединения параметров", path, "CombineParameters.Class" );
+            PushButtonData button = new PushButtonData("QWERTY", "Click to combine parameters", path, "CombineParameters.Class" );
             //panel - group of commands
-            RibbonPanel panel = app.CreateRibbonPanel("ДАК ПРОДЖЕКТ", "Объединение параметров");
+            RibbonPanel panel = app.CreateRibbonPanel("ДАК ПРОДЖЕКТ", "Combining parameters");
             PushButton pushButton = panel.AddItem(button) as PushButton;
       
             return Result.Succeeded;
