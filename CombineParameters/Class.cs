@@ -29,14 +29,15 @@ namespace CombineParameters
 
             SortedList<string, Category> myCategories = new SortedList<string, Category>();
 
-
- // CAN I DELETE THIS? 
-
+            
             foreach (Category c in categories)
             {
                 myCategories.Add(c.Name, c);
             }
 
+
+ // CAN I DELETE THIS BECAUSE WHAT IS THE POINT OF IT? 
+            /*
             myCategories.Clear();
 
             foreach (Category c in categories)
@@ -44,16 +45,21 @@ namespace CombineParameters
                 if (c.AllowsBoundParameters)
                 myCategories.Add(c.Name, c);
             }
+            */
+
             UserWindow UserWindow = new UserWindow(myCategories);
             UserWindow.Show();
 
-            /*
-            ElementCategoryFilter filter = new ElementCategoryFilter(category);
-            FilteredElementCollector collector = new FilteredElementCollector(doc);
+
+            //ElementCategoryFilter filter = new ElementCategoryFilter(category);
+            //FilteredElementCollector collector = new FilteredElementCollector(doc);
             //IList<Element> ListOfParameters = collector.WherePasses(filter);
             //this one doesn't work either
             //IList<Element> ListOfParameters = ListOfParameters.OfClass(typeof(category))
-            */
+
+
+
+
 
             Set1.Default.SelectingCategory = "myString";
             Set1.Default.Save();
