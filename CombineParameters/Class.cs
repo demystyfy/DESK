@@ -29,6 +29,9 @@ namespace CombineParameters
 
             SortedList<string, Category> myCategories = new SortedList<string, Category>();
 
+
+ // CAN I DELETE THIS? 
+
             foreach (Category c in categories)
             {
                 myCategories.Add(c.Name, c);
