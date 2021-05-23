@@ -12,7 +12,7 @@
               Width ="282" Height="20" 
               HorizontalAlignment="Left"
               VerticalAlignment="Top" 
-              Margin="42,38,0,0">
+              Margin="47,35,0,0">
         </ComboBox>
         
         <ComboBox HorizontalAlignment="Left" 
