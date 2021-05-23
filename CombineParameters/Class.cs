@@ -79,33 +79,8 @@ namespace CombineParameters
 
 
 
-
-
-
-
-
-
-
-
-
 // IList<Element> ListOfParameters = collector.WherePasses(filter)
-
-
-
-
-
-
-
-
-
-
 //toElements will retrieve the elements
-
-
-
-
-
-
 //IList<Element> FCategoryList = FCategory.WherePasses(filter).WhereElementIsNotElementType().ToElements();
 
 
