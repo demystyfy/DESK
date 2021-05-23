@@ -405,3 +405,9 @@ C:\Users\Admin\Desktop\Combine Parameters (WPF)\CombineParameters 2019\obj\Debug
 C:\Users\Admin\Desktop\Combine Parameters (WPF)\CombineParameters 2019\obj\Debug\CombineParameters.g.resources
 C:\Users\Admin\Desktop\Combine Parameters (WPF)\CombineParameters 2019\obj\Debug\CombineParameters.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\Combine Parameters (WPF)\CombineParameters 2019\bin\Debug\CombineParameters.dll.config
+C:\Users\Admin\Desktop\Git\DESK\CombineParameters\obj\Debug\CombineParameters.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\Git\DESK\CombineParameters\obj\Debug\UserWindow.g.cs
+C:\Users\Admin\Desktop\Git\DESK\CombineParameters\obj\Debug\CombineParameters_MarkupCompile.cache
+C:\Users\Admin\Desktop\Git\DESK\CombineParameters\obj\Debug\CombineParameters_MarkupCompile.lref
+C:\Users\Admin\Desktop\Git\DESK\CombineParameters\obj\Debug\CombineParameters.dll
+C:\Users\Admin\Desktop\Git\DESK\CombineParameters\obj\Debug\CombineParameters.pdb
