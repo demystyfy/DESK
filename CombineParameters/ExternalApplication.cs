@@ -26,7 +26,7 @@ namespace CombineParameters
             //needs to be string, therefore using quotation marks 
             PushButtonData button = new PushButtonData("QWERTY", "Click to combine parameters", path, "CombineParameters.Class" );
             //panel - group of commands
-            RibbonPanel panel = app.CreateRibbonPanel("ДАК ПРОДЖЕКТ", "Combining parameters");
+            RibbonPanel panel = app.CreateRibbonPanel("DAC Project", "Combining parameters");
             PushButton pushButton = panel.AddItem(button) as PushButton;
       
             return Result.Succeeded;
