@@ -53,6 +53,9 @@ namespace CombineParameters
             UserWindow.Show();
 
 
+            //UI IMPLEMENTAION
+
+
             //ElementCategoryFilter filter = new ElementCategoryFilter(category);
             //FilteredElementCollector collector = new FilteredElementCollector(doc);
             //IList<Element> ListOfParameters = collector.WherePasses(filter);
