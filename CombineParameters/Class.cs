@@ -67,13 +67,6 @@ namespace CombineParameters
             Set1.Default.Save();
 
 
-
-
-
-
-
-
-
             return Result.Succeeded;
         }
     }
