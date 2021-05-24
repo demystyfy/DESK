@@ -17,14 +17,14 @@
 -->
 	
 <AddIn Type="Application">
-	<Name>ApplicationPlugin</Name>
+	<Name>Combine Parameters</Name>
 	<Assembly>CombineParameters.dll</Assembly>
 	<AddInId>
 		5C1F4426-F7BE-42EF-9B8B-C4BD0FE8CD68
 	</AddInId>
 	<FullClassName>CombineParameters.ExternalApplication</FullClassName>
-	<VendorId>Jeremy</VendorId>
-	<VendorDescription>@Learndynamo</VendorDescription>
+	<VendorId>Vendor ID</VendorId>
+	<VendorDescription>Vendor Description</VendorDescription>
 </AddIn>
 
 	
