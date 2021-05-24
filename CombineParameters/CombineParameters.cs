@@ -1,6 +1,4 @@
-﻿//Hi There
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -52,17 +50,6 @@ namespace CombineParameters
             UserWindow UserWindow = new UserWindow(myCategories);
             UserWindow.Show();
 
-
-            //ElementCategoryFilter filter = new ElementCategoryFilter(category);
-            //FilteredElementCollector collector = new FilteredElementCollector(doc);
-            //IList<Element> ListOfParameters = collector.WherePasses(filter);
-            //this one doesn't work either
-            //IList<Element> ListOfParameters = ListOfParameters.OfClass(typeof(category))
-
-
-
-
-
             Set1.Default.SelectingCategory = "myString";
             Set1.Default.Save();
 
@@ -77,6 +64,17 @@ namespace CombineParameters
 // IList<Element> ListOfParameters = collector.WherePasses(filter)
 //toElements will retrieve the elements
 //IList<Element> FCategoryList = FCategory.WherePasses(filter).WhereElementIsNotElementType().ToElements();
+
+
+//UI IMPLEMENTAION
+
+
+//ElementCategoryFilter filter = new ElementCategoryFilter(category);
+//FilteredElementCollector collector = new FilteredElementCollector(doc);
+//IList<Element> ListOfParameters = collector.WherePasses(filter);
+//this one doesn't work either
+//IList<Element> ListOfParameters = ListOfParameters.OfClass(typeof(category))
+
 
 
 

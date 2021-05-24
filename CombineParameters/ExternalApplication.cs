@@ -20,7 +20,6 @@ namespace CombineParameters
         public Result OnStartup(UIControlledApplication app)
         {
             //Create Ribbon Element
-            //нет необходимости использовать переменные
             app.CreateRibbonTab("DAC Project");
             string path = Assembly.GetExecutingAssembly().Location;
             //needs to be string, therefore using quotation marks 
