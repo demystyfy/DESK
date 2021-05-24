@@ -6,24 +6,38 @@
              xmlns:local="clr-namespace:CombineParameters"
              mc:Ignorable="d" Height="382.5" Width="710">
 
-    <Grid>
+    <Grid Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" OpacityMask="Black">
         <ComboBox x:Name="AllTheCategories" 
               SelectedItem="TheChosenOne"    
-              Width ="282" Height="20" 
+              Width ="226" Height="22" 
               HorizontalAlignment="Left"
               VerticalAlignment="Top" 
-              Margin="47,35,0,0">
+              Margin="410,29,0,0">
         </ComboBox>
-        
+
         <ComboBox HorizontalAlignment="Left" 
                   VerticalAlignment="Top"
-                  Width="282"
-                  Margin="400,35,0,0" 
-                  Height="23"/>
-        <Button Content="Ok" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="88,220,0,0" Click="Button_Click"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="561,215,0,0" Click="ButtonCancelClick"/>
+                  Width="226"
+                  Margin="410,81,0,0" 
+                  Height="21"/>
 
+        <Button Content="Ok" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top"
+                Width="75" 
+                Margin="88,220,0,0"
+                Click="Button_Click"/>
 
+        <Button Content="Cancel"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Width="75"
+                Margin="561,215,0,0"
+                Click="ButtonCancelClick"/>
+        <TextBlock HorizontalAlignment="Left" 
+                   TextWrapping="Wrap" 
+                   Text="Choose Categories"
+                   Margin="54,29,0,283" Width="134"/>
 
     </Grid>
 </Window>
