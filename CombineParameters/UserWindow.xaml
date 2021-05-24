@@ -9,7 +9,7 @@
     <Grid Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" OpacityMask="Black">
         <ComboBox x:Name="AllTheCategories" 
               SelectedItem="TheChosenOne"    
-              Width ="226" Height="22" 
+              Width ="187" Height="17" 
               HorizontalAlignment="Left"
               VerticalAlignment="Top" 
               Margin="410,29,0,0">
@@ -17,9 +17,9 @@
 
         <ComboBox HorizontalAlignment="Left" 
                   VerticalAlignment="Top"
-                  Width="226"
-                  Margin="410,81,0,0" 
-                  Height="21"/>
+                  Width="187"
+                  Margin="410,64,0,0" 
+                  Height="15"/>
 
         <Button Content="Ok" 
                 HorizontalAlignment="Left" 
@@ -36,8 +36,14 @@
                 Click="ButtonCancelClick"/>
         <TextBlock HorizontalAlignment="Left" 
                    TextWrapping="Wrap" 
-                   Text="Choose Categories"
-                   Margin="54,29,0,283" Width="134"/>
+                   Text="Choose Categories:"
+                   Margin="54,29,0,291"
+                   Width="140" FontSize="16"/>
+        <ComboBox HorizontalAlignment="Left" 
+            VerticalAlignment="Top"
+            Width="187"
+            Margin="410,96,0,0" 
+            Height="16"/>
 
     </Grid>
 </Window>
