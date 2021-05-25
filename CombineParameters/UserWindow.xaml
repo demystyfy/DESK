@@ -4,46 +4,43 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CombineParameters"
-             mc:Ignorable="d" Height="382.5" Width="710">
+             mc:Ignorable="d" Height="973.5" Width="898"
+             Title="Combine parameters">
 
-    <Grid Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" OpacityMask="Black">
+    <Grid
+          OpacityMask="Black">
+
+
         <ComboBox x:Name="AllTheCategories" 
               SelectedItem="TheChosenOne"    
-              Width ="187" Height="17" 
+              Width ="430" Height="26" 
               HorizontalAlignment="Left"
               VerticalAlignment="Top" 
-              Margin="410,29,0,0">
+              Margin="29,87,0,0">
         </ComboBox>
 
-        <ComboBox HorizontalAlignment="Left" 
-                  VerticalAlignment="Top"
-                  Width="187"
-                  Margin="410,64,0,0" 
-                  Height="15"/>
 
         <Button Content="Ok" 
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
-                Width="75" 
-                Margin="88,220,0,0"
-                Click="Button_Click"/>
+                Width="76" 
+                Margin="383,171,0,0"
+                Click="Button_Click" Height="20"/>
 
         <Button Content="Cancel"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top" 
                 Width="75"
-                Margin="561,215,0,0"
-                Click="ButtonCancelClick"/>
+                Margin="29,171,0,0"
+                Click="ButtonCancelClick" Height="20"/>
+
         <TextBlock HorizontalAlignment="Left" 
                    TextWrapping="Wrap" 
-                   Text="Choose Categories:"
-                   Margin="54,29,0,291"
-                   Width="140" FontSize="16"/>
-        <ComboBox HorizontalAlignment="Left" 
-            VerticalAlignment="Top"
-            Width="187"
-            Margin="410,96,0,0" 
-            Height="16"/>
+                   Text="Please select one or more categories:"
+                   Margin="29,41,0,115"
+                   Width="378" FontSize="20"/>
+
+
 
     </Grid>
 </Window>

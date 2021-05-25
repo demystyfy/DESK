@@ -28,61 +28,61 @@ namespace CombineParameters
         {
             InitializeComponent();
 
-
-
+//FIRST COMBOBOX
             AllTheCategories.ItemsSource = elements;
-
-            AllTheCategories.SelectedIndex = 0;
-
-
+            //AllTheCategories.SelectedIndex = 0;
             AllTheCategories.DisplayMemberPath = "Key";
             AllTheCategories.SelectionChanged += OnSelectionChanged;
-            
-            
-            foreach (KeyValuePair<string, Category> item in AllTheCategories.Items)
 
+
+            /*
+            foreach (KeyValuePair<string, Category> item in AllTheCategories.Items)
             {
             item.Key
-
             }
+            */
 
-        
         }
-
 
         public void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
+            // IS THIS NECESSARY?
             if (AllTheCategories.SelectedItem is null)
             {
             }
+
+
             else if (AllTheCategories.SelectedItem is KeyValuePair<string, object> keyValuePair)
             {
                Category category = (Category)keyValuePair.Value;
-                // var category = keyValuePair.Value;
+                
+                //MANAGING SETTINGS FILE
                 Set1.Default.SelectingCategory = category.Name;
+
                 Set1.Default.Save();
+                // var category = keyValuePair.Value;
             }
 
         }
 
-
-
-
-
         private void ButtonCancelClick(object sender, RoutedEventArgs e)
         {
-            this.Close();
+           
+
+            //this.Close();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Set1.Default.Save();
-            this.Close();
+            //MessageBox.Show(Set1.Default.SelectingCategory);
+            //Set1.Default.Save();
+            UserWindowParameters UWP = new UserWindowParameters();
+            UWP.Show();
         }
 
 
         //string myStringUser = Set1.Default.SelectingCategory;
-
         // =Set1.Default.SelectingCategory;
 
 

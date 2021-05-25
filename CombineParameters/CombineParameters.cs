@@ -47,12 +47,13 @@ namespace CombineParameters
             }
             */
 
+
             UserWindow UserWindow = new UserWindow(myCategories);
             UserWindow.Show();
 
-            Set1.Default.SelectingCategory = "myString";
+            //Set1.Default.SelectingCategory = "myString";
+            
             Set1.Default.Save();
-
 
             return Result.Succeeded;
         }
