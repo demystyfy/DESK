@@ -28,7 +28,8 @@ namespace CombineParameters
         {
             InitializeComponent();
 
-            AllTheCategories.ItemsSource = elements;
+            myCategories = elements;
+            AllTheCategories.ItemsSource = myCategories;
             //AllTheCategories.SelectedIndex = 0;
             AllTheCategories.DisplayMemberPath = "Key";
             AllTheCategories.SelectionChanged += OnSelectionChanged;
