@@ -29,23 +29,24 @@ namespace CombineParameters
 
             SortedList<string, Category> myCategories = new SortedList<string, Category>();
 
-            
-            foreach (Category c in categories)
-            {
-                myCategories.Add(c.Name, c);
-            }
+            /* 
+             foreach (Category c in categories)
+             {
+                 myCategories.Add(c.Name, c);
+             }
+            */
 
-
- // CAN I DELETE THIS BECAUSE WHAT IS THE POINT OF IT? 
+            // CAN I DELETE THIS BECAUSE WHAT IS THE POINT OF IT? 
             /*
             myCategories.Clear();
+             */
 
             foreach (Category c in categories)
             {
                 if (c.AllowsBoundParameters)
                 myCategories.Add(c.Name, c);
             }
-            */
+           
 
 
             UserWindow UserWindow = new UserWindow(myCategories);
