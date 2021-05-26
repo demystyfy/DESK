@@ -28,7 +28,6 @@ namespace CombineParameters
         {
             InitializeComponent();
 
-//FIRST COMBOBOX
             AllTheCategories.ItemsSource = elements;
             //AllTheCategories.SelectedIndex = 0;
             AllTheCategories.DisplayMemberPath = "Key";
