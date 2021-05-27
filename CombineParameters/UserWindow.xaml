@@ -4,41 +4,60 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CombineParameters"
-             mc:Ignorable="d" Height="973.5" Width="898"
+             mc:Ignorable="d" Height="989.5" Width="998"
              Title="Combine parameters">
 
     <Grid
           OpacityMask="Black">
 
 
-        <ComboBox x:Name="AllTheCategories" 
+        <!--<ComboBox x:Name="AllTheCategories" 
               SelectedItem="TheChosenOne"    
               Width ="430" Height="26" 
               HorizontalAlignment="Left"
               VerticalAlignment="Top" 
               Margin="29,87,0,0">
-        </ComboBox>
+        </ComboBox>-->
+
+
+        <ScrollViewer  Height="auto" Margin="47,169,195,231" >
+
+            <StackPanel 
+                    x:Name="stackPanel"
+                    Height="auto"
+                    HorizontalAlignment="Right" 
+                    VerticalAlignment="Top"
+                    Width="auto" RenderTransformOrigin="0.5,0.5"/>
+
+        </ScrollViewer>
+
+
+
+
+
+
+
 
 
         <Button Content="Ok" 
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
                 Width="76" 
-                Margin="383,171,0,0"
+                Margin="719,790,0,0"
                 Click="Button_Click" Height="20"/>
 
         <Button Content="Cancel"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top" 
                 Width="75"
-                Margin="29,171,0,0"
+                Margin="141,790,0,0"
                 Click="ButtonCancelClick" Height="20"/>
 
         <TextBlock HorizontalAlignment="Left" 
                    TextWrapping="Wrap" 
                    Text="Please select one or more categories:"
-                   Margin="29,41,0,115"
-                   Width="378" FontSize="20"/>
+                   Margin="115,29,0,871"
+                   Width="522" FontSize="28"/>
 
 
 
