@@ -4,17 +4,33 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CombineParameters"
-             mc:Ignorable="d" Height="989.5" Width="998"
+             mc:Ignorable="d" Height="556.5" Width="636"
              Title="Combine parameters">
 
     <Grid
-          OpacityMask="Black">
+          OpacityMask="Black" Margin="0,0,2,6">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="34"/>
+            <ColumnDefinition Width="552"/>
+            <ColumnDefinition Width="407"/>
+
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="84"/>
+            <RowDefinition Height="347"/>
+            <RowDefinition Height="1400"/>
+        </Grid.RowDefinitions>
 
 
 
-        <ScrollViewer  Height="auto" Margin="47,169,195,231" >
+        <ScrollViewer Margin="37,31,42,32" Grid.Row="1" Grid.Column="1" >
 
             <StackPanel 
+                    
                     x:Name="stackPanel"
                     Height="auto"
                     HorizontalAlignment="Right" 
@@ -23,25 +39,30 @@
 
         </ScrollViewer>
 
-        <Button Content="Ok" 
+        <Button 
+            
+                Content="Ok" 
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top"
-                Width="76" 
-                Margin="719,790,0,0"
-                Click="Button_Click" Height="20"/>
+                Width="90" 
+                Margin="420,33,0,0"
+                Click="Button_Click" Height="30" Grid.Column="1" Grid.Row="2"/>
 
-        <Button Content="Cancel"
+        <Button 
+                Grid.Column="1"
+                Grid.Row="2"
+                Content="Cancel"
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top" 
-                Width="75"
-                Margin="141,790,0,0"
-                Click="ButtonCancelClick" Height="20"/>
+                Width="90"
+                Margin="51,33,0,0"
+                Click="ButtonCancelClick" Height="30" />
 
-        <TextBlock HorizontalAlignment="Left" 
+        <TextBlock 
+                   Grid.Row="0" 
                    TextWrapping="Wrap" 
                    Text="Please select one or more categories:"
-                   Margin="115,29,0,871"
-                   Width="522" FontSize="28"/>
+                   Margin="18,22,28,26" FontSize="28" Grid.Column="1" />
 
 
 

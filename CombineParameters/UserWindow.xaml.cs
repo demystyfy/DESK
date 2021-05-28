@@ -39,27 +39,27 @@ namespace CombineParameters
 
         }
 
-        public void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+        //public void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
 
-            // IS THIS NECESSARY?
-            //if (AllTheCategories.SelectedItem is null)
-            //{
-            //}
+        //    // IS THIS NECESSARY?
+        //    //if (AllTheCategories.SelectedItem is null)
+        //    //{
+        //    //}
 
 
-            //else if (AllTheCategories.SelectedItem is KeyValuePair<string, object> keyValuePair)
-            //{
-            //   Category category = (Category)keyValuePair.Value;
+        //    //else if (AllTheCategories.SelectedItem is KeyValuePair<string, object> keyValuePair)
+        //    //{
+        //    //   Category category = (Category)keyValuePair.Value;
                 
-            //    //MANAGING SETTINGS FILE
-            //    Set1.Default.SelectingCategory = category.Name;
+        //    //    //MANAGING SETTINGS FILE
+        //    //    Set1.Default.SelectingCategory = category.Name;
 
-            //    Set1.Default.Save();
-            //    // var category = keyValuePair.Value;
-            //}
+        //    //    Set1.Default.Save();
+        //    //    // var category = keyValuePair.Value;
+        //    //}
 
-        }
+        //}
 
         private void ButtonCancelClick(object sender, RoutedEventArgs e)
         {
