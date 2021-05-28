@@ -4,11 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CombineParameters"
-             mc:Ignorable="d" Height="556.5" Width="636"
-             Title="Combine parameters">
+             mc:Ignorable="d" Height="576.5" Width="582"
+             Title="Combine parameters" Background="#FFCBCBCB">
 
     <Grid
-          OpacityMask="Black" Margin="0,0,2,6">
+          OpacityMask="#FFC73E3E" Margin="0,0,2,6">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="34"/>
@@ -27,7 +27,7 @@
 
 
 
-        <ScrollViewer Margin="37,31,42,32" Grid.Row="1" Grid.Column="1" >
+        <ScrollViewer Margin="0,0,61,32" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="473" Height="284" VerticalAlignment="Bottom" >
 
             <StackPanel 
                     
@@ -41,11 +41,9 @@
 
         <Button 
             
-                Content="Ok" 
-                HorizontalAlignment="Left" 
-                VerticalAlignment="Top"
-                Width="90" 
-                Margin="420,33,0,0"
+                Content="Next" 
+                VerticalAlignment="Top" 
+                Margin="401,33,61,0"
                 Click="Button_Click" Height="30" Grid.Column="1" Grid.Row="2"/>
 
         <Button 
@@ -55,7 +53,7 @@
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top" 
                 Width="90"
-                Margin="51,33,0,0"
+                Margin="57,33,0,0"
                 Click="ButtonCancelClick" Height="30" />
 
         <TextBlock 
