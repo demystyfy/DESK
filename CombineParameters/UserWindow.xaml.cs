@@ -22,22 +22,13 @@ namespace CombineParameters
     /// </summary>
     public partial class UserWindow : Window
     {
-        SortedList<string, Category> myCategories;
+        SortedList<string, Category> _categories;
 
         public UserWindow(SortedList<string, Category> elements)
         {
             InitializeComponent();
 
-            myCategories = elements;
-            AllTheCategories.ItemsSource = myCategories;
-            //AllTheCategories.SelectedIndex = 0;
-            AllTheCategories.DisplayMemberPath = "Key";
-            AllTheCategories.SelectionChanged += OnSelectionChanged;
-
-
-
             _categories = elements;
-
 
             foreach (KeyValuePair<string, Category> cat in elements)
             {
@@ -46,40 +37,35 @@ namespace CombineParameters
                 stackPanel.Children.Add(cb);
             }
 
-
-
-
-
-
         }
 
         public void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
             // IS THIS NECESSARY?
-            if (AllTheCategories.SelectedItem is null)
-            {
-            }
+            //if (AllTheCategories.SelectedItem is null)
+            //{
+            //}
 
 
-            else if (AllTheCategories.SelectedItem is KeyValuePair<string, object> keyValuePair)
-            {
-               Category category = (Category)keyValuePair.Value;
+            //else if (AllTheCategories.SelectedItem is KeyValuePair<string, object> keyValuePair)
+            //{
+            //   Category category = (Category)keyValuePair.Value;
                 
-                //MANAGING SETTINGS FILE
-                Set1.Default.SelectingCategory = category.Name;
+            //    //MANAGING SETTINGS FILE
+            //    Set1.Default.SelectingCategory = category.Name;
 
-                Set1.Default.Save();
-                // var category = keyValuePair.Value;
-            }
+            //    Set1.Default.Save();
+            //    // var category = keyValuePair.Value;
+            //}
 
         }
 
         private void ButtonCancelClick(object sender, RoutedEventArgs e)
         {
            
+            this.Close();
 
-            //this.Close();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -111,7 +97,11 @@ item.Key
 
 
 
-
+//myCategories = elements;
+//AllTheCategories.ItemsSource = myCategories;
+////AllTheCategories.SelectedIndex = 0;
+//AllTheCategories.DisplayMemberPath = "Key";
+//AllTheCategories.SelectionChanged += OnSelectionChanged;
 
 
 
