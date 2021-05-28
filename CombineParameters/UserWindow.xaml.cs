@@ -35,12 +35,6 @@ namespace CombineParameters
             AllTheCategories.SelectionChanged += OnSelectionChanged;
 
 
-            /*
-            foreach (KeyValuePair<string, Category> item in AllTheCategories.Items)
-            {
-            item.Key
-            }
-            */
 
             _categories = elements;
 
@@ -106,6 +100,14 @@ namespace CombineParameters
 
 
 
+
+
+/*
+foreach (KeyValuePair<string, Category> item in AllTheCategories.Items)
+{
+item.Key
+}
+*/
 
 
 
