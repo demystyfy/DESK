@@ -5,20 +5,77 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CombineParameters"
              mc:Ignorable="d" Height="310" Width="476"
-             Title="Combine parameters" >
+             Title="Combine parameters" Background="#FFCBCBCB">
 
 
-    <Grid>
+    <Grid RenderTransformOrigin="0.494,0.534">
         <TextBlock HorizontalAlignment="Left" 
             TextWrapping="Wrap" 
             Text="Please select one or more parameters:"
-            Margin="10,20,0,134"
-            Width="364" FontSize="20"/>
+            Margin="10,20,0,228"
+            Width="342" FontSize="20"/>
 
+
+
+        <ScrollViewer Margin="0,0,279,45" HorizontalAlignment="Right" Width="169" Height="160" VerticalAlignment="Bottom" >
+
+            <StackPanel 
+                    
+                    x:Name="stackPanel"
+                    Height="auto"
+                    HorizontalAlignment="Right" 
+                    VerticalAlignment="Top"
+                    Width="auto" RenderTransformOrigin="0.5,0.5"/>
+
+        </ScrollViewer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <Button
+            x:Name="but"
+            Margin="204,105,224,137">
+            <Image Source="arrow.png" Height="35" Width="38"/>
+
+        </Button>
+
+        <!--<Button
+            
+            Margin="204,170,224,75">
+            <Image Source="arrow.png" Height="31" Width="37" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-179.478"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+
+        </Button>-->
     </Grid>
-    
-    
-    
+
+
+
 
 
 

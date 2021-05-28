@@ -35,7 +35,13 @@ namespace CombineParameters
                 CheckBox cb = new CheckBox();
                 cb.Content = cat.Key;
                 stackPanel.Children.Add(cb);
+               
             }
+
+
+
+
+
 
         }
 

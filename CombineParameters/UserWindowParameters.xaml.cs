@@ -23,9 +23,21 @@ namespace CombineParameters
     /// </summary>
     public partial class UserWindowParameters : Window
     {
+
+
+
+
+
+        //List<Parameter> _parameters; 
         public UserWindowParameters()
+        //public UserWindowParameters(List<Parameter> parameters)
         {
             InitializeComponent();
+
+
+            //_parameters = parameters;
+
+
         }
     }
 }
