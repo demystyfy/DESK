@@ -42,6 +42,21 @@ namespace CombineParameters
             }
             */
 
+            _categories = elements;
+
+
+            foreach (KeyValuePair<string, Category> cat in elements)
+            {
+                CheckBox cb = new CheckBox();
+                cb.Content = cat.Key;
+                stackPanel.Children.Add(cb);
+            }
+
+
+
+
+
+
         }
 
         public void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
