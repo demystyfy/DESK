@@ -66,11 +66,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Set1.settings</DependentUpon>
     </Compile>
-    <Compile Include="UserWindow.xaml.cs">
-      <DependentUpon>UserWindow.xaml</DependentUpon>
+    <Compile Include="%28Page1%29UserWindow.xaml.cs">
+      <DependentUpon>%28Page1%29UserWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserWindowParameters.xaml.cs">
-      <DependentUpon>UserWindowParameters.xaml</DependentUpon>
+    <Compile Include="%28Page2%29UserWindowParameters.xaml.cs">
+      <DependentUpon>%28Page2%29UserWindowParameters.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -82,11 +82,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="UserWindow.xaml">
+    <Page Include="%28Page1%29UserWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserWindowParameters.xaml">
+    <Page Include="%28Page2%29UserWindowParameters.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
