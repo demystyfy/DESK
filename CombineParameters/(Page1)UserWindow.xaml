@@ -36,14 +36,14 @@
                     VerticalAlignment="Top"
                     Width="auto" RenderTransformOrigin="0.5,0.5"/>
 
-        </ScrollViewer>
+             </ScrollViewer>
 
         <Button 
             
                 Content="Next" 
                 VerticalAlignment="Top" 
                 Margin="401,33,61,0"
-                Click="Button_Click" Height="30" Grid.Column="1" Grid.Row="2"/>
+                Click="Next" Height="30" Grid.Column="1" Grid.Row="2"/>
 
         <Button 
                 Grid.Column="1"

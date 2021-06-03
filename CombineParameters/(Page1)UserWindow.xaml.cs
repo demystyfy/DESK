@@ -35,60 +35,76 @@ namespace CombineParameters
                 CheckBox cb = new CheckBox();
                 cb.Content = cat.Key;
                 stackPanel.Children.Add(cb);
-               
+                
+                cb.Click += CheckedChanged;
+
             }
-
-
-
-
-
-
         }
 
-        //public void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-        //{
-
-        //    // IS THIS NECESSARY?
-        //    //if (AllTheCategories.SelectedItem is null)
-        //    //{
-        //    //}
-
-
-        //    //else if (AllTheCategories.SelectedItem is KeyValuePair<string, object> keyValuePair)
-        //    //{
-        //    //   Category category = (Category)keyValuePair.Value;
-                
-        //    //    //MANAGING SETTINGS FILE
-        //    //    Set1.Default.SelectingCategory = category.Name;
-
-        //    //    Set1.Default.Save();
-        //    //    // var category = keyValuePair.Value;
-        //    //}
-
-        //}
-
-        private void ButtonCancelClick(object sender, RoutedEventArgs e)
+        public void Next(object sender, RoutedEventArgs e)
         {
            
-            this.Close();
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            //MessageBox.Show(Set1.Default.SelectingCategory);
-            //Set1.Default.Save();
             UserWindowParameters UWP = new UserWindowParameters();
             UWP.Show();
         }
 
+        private void CheckedChanged(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Welcome");
 
-        //string myStringUser = Set1.Default.SelectingCategory;
-        // =Set1.Default.SelectingCategory;
+        }
 
+        private void ButtonCancelClick(object sender, RoutedEventArgs e)
+        {
+
+            this.Close();
+
+        }
 
     }
 }
+
+
+
+//public void Next(object sender, RoutedEventArgs e)
+//{
+//    //MessageBox.Show(Set1.Default.SelectingCategory);
+//    //Set1.Default.Save();
+
+//    UserWindowParameters UWP = new UserWindowParameters();
+//    UWP.Show();
+//}
+
+
+
+
+//string myStringUser = Set1.Default.SelectingCategory;
+// =Set1.Default.SelectingCategory;
+
+
+
+//public void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+//{
+
+//    // IS THIS NECESSARY?
+//    //if (AllTheCategories.SelectedItem is null)
+//    //{
+//    //}
+
+
+//    //else if (AllTheCategories.SelectedItem is KeyValuePair<string, object> keyValuePair)
+//    //{
+//    //   Category category = (Category)keyValuePair.Value;
+
+//    //    //MANAGING SETTINGS FILE
+//    //    Set1.Default.SelectingCategory = category.Name;
+
+//    //    Set1.Default.Save();
+//    //    // var category = keyValuePair.Value;
+//    //}
+
+//}
+
 
 
 
@@ -108,61 +124,6 @@ item.Key
 ////AllTheCategories.SelectedIndex = 0;
 //AllTheCategories.DisplayMemberPath = "Key";
 //AllTheCategories.SelectionChanged += OnSelectionChanged;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

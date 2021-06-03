@@ -30,7 +30,7 @@ namespace CombineParameters
             InitializeComponent();
             //_parameters = parameters;
         }
-
+        
         private void AddParameter(object sender, RoutedEventArgs e)
         {
             // this button delete the selected parameter from "available parameter" list, and add the parameter to the "selected parameter" list. On the last position
