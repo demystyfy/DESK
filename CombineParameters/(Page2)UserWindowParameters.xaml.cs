@@ -29,6 +29,8 @@ namespace CombineParameters
         {
             InitializeComponent();
             //_parameters = parameters;
+
+            // selectedParameters.ItemsSource = Tools.GetParameters();
         }
         
         private void AddParameter(object sender, RoutedEventArgs e)

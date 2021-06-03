@@ -30,14 +30,15 @@ namespace CombineParameters
 
             _categories = elements;
 
+            // Key: "Walls"
+            // Value: Autodesk.Revit.RB.Category -> the name of this category is "Walls".
+
             foreach (KeyValuePair<string, Category> cat in elements)
             {
                 CheckBox cb = new CheckBox();
                 cb.Content = cat.Key;
                 stackPanel.Children.Add(cb);
-                
                 cb.Click += CheckedChanged;
-
             }
         }
 
@@ -50,7 +51,7 @@ namespace CombineParameters
 
         private void CheckedChanged(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Welcome");
+            // MessageBox.Show("Welcome");
 
         }
 

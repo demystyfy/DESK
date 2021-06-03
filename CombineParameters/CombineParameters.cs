@@ -24,14 +24,14 @@ namespace CombineParameters
             UIApplication uiapp = commandData.Application;
             UIDocument uidoc = uiapp.ActiveUIDocument;
             Document doc = uidoc.Document;
-            Settings documentSettings = doc.Settings;
-            Categories categories = documentSettings.Categories;
+
+            Categories categories = Tools.GetCategories(doc);
 
             SortedList<string, Category> myCategories = new SortedList<string, Category>();
 
             foreach (Category c in categories)
             {
-                if (c.AllowsBoundParameters)
+                /*if (c.AllowsBoundParameters) */
                 myCategories.Add(c.Name, c);
             }
 
