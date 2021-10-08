@@ -24,35 +24,19 @@ namespace CombineParameters
             UIApplication uiapp = commandData.Application;
             UIDocument uidoc = uiapp.ActiveUIDocument;
             Document doc = uidoc.Document;
-            Settings documentSettings = doc.Settings;
-            Categories categories = documentSettings.Categories;
+
+            Categories categories = Tools.GetCategories(doc);
 
             SortedList<string, Category> myCategories = new SortedList<string, Category>();
 
-            
             foreach (Category c in categories)
             {
+                /*if (c.AllowsBoundParameters) */
                 myCategories.Add(c.Name, c);
             }
-
-
- // CAN I DELETE THIS BECAUSE WHAT IS THE POINT OF IT? 
-            /*
-            myCategories.Clear();
-
-            foreach (Category c in categories)
-            {
-                if (c.AllowsBoundParameters)
-                myCategories.Add(c.Name, c);
-            }
-            */
 
             UserWindow UserWindow = new UserWindow(myCategories);
             UserWindow.Show();
-
-            Set1.Default.SelectingCategory = "myString";
-            Set1.Default.Save();
-
 
             return Result.Succeeded;
         }
@@ -76,7 +60,8 @@ namespace CombineParameters
 //IList<Element> ListOfParameters = ListOfParameters.OfClass(typeof(category))
 
 
-
+//Set1.Default.SelectingCategory = "myString";
+//Set1.Default.Save();
 
 
 
